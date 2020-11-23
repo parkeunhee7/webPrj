@@ -19,7 +19,7 @@ public class MemberService {
 		String sql = "select * from member where pwd = '111'";
 		
 		try {
-			
+			Class.forName("oracle.jdbc.driver.OracleDriver");
 			Connection con = DriverManager.getConnection(url, "NEWLEC", "11111");		
 			Statement st = con.createStatement();
 			ResultSet rs = st.executeQuery(sql);
@@ -44,7 +44,7 @@ public class MemberService {
 			st.close();
 			con.close();
 			
-		} catch (SQLException e) {
+		} catch (SQLException | ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

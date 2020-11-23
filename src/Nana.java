@@ -19,8 +19,20 @@ public class Nana extends HttpServlet {
 		String url = "jdbc:oracle:thin:@hi.namoolab.com:1521/xepdb1";
 		String sql = "select * from member";
 
-		for(Member m : list)
-			out.printf("nicname : %s, name : %s, pwd : %s \n", m.getNicname(), m.getName(), m.getPwd());
+		String html = "<table>";
+		
+		for(Member m : list) {
+			html += "<tr>";
+			html += "<td>" + m.getNicname() + "</td><td>"+m.getName()+"</td>";
+			html += "</tr>";
+		}
+		
+		html += "</table>";
+		
+		out.println(html);
+		
+//		for(Member m : list)
+//			out.printf("nicname : %s, name : %s, pwd : %s <br >\n", m.getNicname(), m.getName(), m.getPwd());
 		
 		
 	}
