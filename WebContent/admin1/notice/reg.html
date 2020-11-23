@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header id="header">
+        <h1>뉴렉처</h1>
+
+        <div>
+            <h1 style="color:blue;font-size: 5px;">메인메뉴</h1>
+            <nav>
+
+                <ul>
+                    <li>학습가이드</li>
+                    <li>강좌선택</li>
+                    <li>Answeris</li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>회원메뉴</h1>
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="">로그인</a></li>
+                    <li><a href="">회원가입</a></li>
+                </ul>
+            </nav>
+            <h1>바로가기 메뉴</h1>
+            <ul>
+                <li><a href="">마이페이지</a></li>
+                <li><a href="list.html">고객센터</a></li>
+            </ul>
+            <nav>
+            </nav>
+        </div>
+    </header>
+
+    <section id="aside">
+        <h1>고객센터</h1>
+    </section>
+
+    <section>
+        <main id="main">
+            <h1>공지사항 등록</h1>
+
+            <section>
+                <h1>경로</h1>
+                <ol>
+                    <li>home</li>
+                    <li>고객센터</li>
+                    <li>공지사항</li>
+                </ol>
+            </section>
+
+            <section>
+                <h1>공지사항 등록 폼</h1>
+                <form action="">
+                    <table border="1">
+                        <tr>
+                            <th>나이</th>
+                            <!-- name이 값을 받을 키 -->
+                            <!-- 키값을 받게 되면 자동완성 기능이 됨 자동완성기능->autocomplete -->
+                            <!-- required은 키값을 입력하지 않으면 값이 전송이 안됨 메세지박스 띄움(잘못된 형식마다 다른 메세지를 띄워줌) -->
+                            <td>
+                                <input name="title" required pattern="^010-\d{3,4}-\d{4}$" autocomplete="off" 
+                                autofocus placeholder="전화번호에 -를 입력해서 구분해주세요(010-2222-3333)" >
+                                <datalist id="type">
+                                    <option value="Dog"></option>
+                                    <option value="Cat"></option>
+                                    <option value="Duck"></option>
+                                </datalist>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th>첨부파일</th>
+                            <td><input></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <textarea></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                    <div>
+                        <input type="submit" value="등록">
+                    </div>
+                </form>
+            </section>
+
+            <section>
+                <h1>페이지정보</h1>
+                <div>
+                    1 / 2 pages
+                </div>
+            </section>
+
+            <section>
+                <h1>페이지 요청목록</h1>
+                <div>
+                    이전
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                    다음
+                </div>
+            </section>
+        </main>
+    </section>
+
+    <section>
+        <footer id="footer">
+            <h1>풋터</h1>
+        </footer>
+    </section>
+
+</body>
+
+</html>

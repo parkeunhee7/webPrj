@@ -1,0 +1,57 @@
+/* 
+*** css3 maker -> 사이트 참조
+
+transform
+ - deley(딜레이) 순서 조정 가능
+ - 초단위 조정 가능
+ - position을 사용하지 않아도 가능
+
+*/
+
+
+.container{
+    width: 500px;
+    height: 300px;
+    background: gray;
+    border: 1px solid black;
+    --position: relative;
+}
+
+.container .box{
+    width: 200px;
+    height: 100px;
+    background: blue;
+    transition: transform 2s steps(9, start), border-radious 5s; /* 모든 속성 : all */
+    transform-origin: left top;
+}
+
+.container:hover .box{
+    border-radius: 20px;
+    transform: rotate(90deg);
+}
+
+.box2{
+    width: 100px;
+    height: 50px;
+    background: #ffff0090;
+    --position: absolute;
+    --left: 100px;
+    --top: 100px;
+    transition: transform 1s cubic-bezier(1.000, -0.600, 0.000, -0.600);
+}
+
+.container:hover .box2{
+    transform: translateX(100px);
+    --left: 200px;
+}
+
+.box3{
+    width: 100px;
+    height: 50px;
+    background: #ff000090;
+    transition: transform 1s;
+}
+
+.container:hover .box3{
+    transform: translateX(100px);
+}
