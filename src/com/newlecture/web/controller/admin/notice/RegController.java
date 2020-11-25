@@ -20,21 +20,30 @@ public class RegController extends HttpServlet{
 						   HttpServletResponse response) throws ServletException, IOException {
 		
 		//한글 깨질 때 Encoding
-		request.setCharacterEncoding("UTF-8");
 		
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
 		
-//		String title = request.getParameter("title");
-		String[] titles = request.getParameterValues("title"); 
+		PrintWriter out = response.getWriter();
+		
+		String title = request.getParameter("title");
+//		String[] titles = request.getParameterValues("title"); 
 		String file = request.getParameter("file");
 		String[] foods = request.getParameterValues("food");
 		
-		for (int i = 0; i < titles.length; i++) {
-			System.out.printf("title is %s\n", titles[i]);			
-		}
+		if(title != null)
+			System.out.printf("title is %s\n", title);
 		
-		for (int i = 0; i < titles.length; i++) {
-			System.out.printf("foods is %s\n", foods[i]);			
-		}
+//		for (int i = 0; i < titles.length; i++) {
+//			System.out.printf("title is %s\n", titles[i]);			
+//		}
+//		
+//		for (int i = 0; i < titles.length; i++) {
+//			System.out.printf("foods is %s\n", foods[i]);			
+//		}
+		
+		for(int i=0; i<foods.length; i++)
+			out.printf("음식 is %s\n", foods[i]);			
 		
 		System.out.printf("file is %s\n", file);
 	}
